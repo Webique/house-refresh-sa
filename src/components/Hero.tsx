@@ -1,13 +1,12 @@
 import { Button } from '@/components/ui/button';
 import { useLanguage } from '@/hooks/useLanguage';
-import { MessageCircle, FileText, Sparkles, Shield, Users, Zap } from 'lucide-react';
+import { MessageCircle, FileText, Sparkles, Users, Zap } from 'lucide-react';
 import heroImage from '@/assets/hero-cleaning-interior.jpg';
 
 export function Hero() {
   const { isRTL, t } = useLanguage();
 
   const trustBadges = [
-    { icon: Shield, text: t('badge.eco') },
     { icon: Users, text: t('badge.team') },
     { icon: Zap, text: t('badge.fast') },
     { icon: Sparkles, text: t('badge.saudi') },
