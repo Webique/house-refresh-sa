@@ -9,7 +9,6 @@ export function Hero() {
   const trustBadges = [
     { icon: Users, text: t('badge.team') },
     { icon: Zap, text: t('badge.fast') },
-    { icon: Sparkles, text: t('badge.saudi') },
   ];
 
   const scrollToContact = () => {
@@ -20,7 +19,7 @@ export function Hero() {
   };
 
   return (
-    <section className="relative min-h-screen bg-gradient-hero flex items-center pt-20 overflow-hidden">
+    <section className="relative min-h-screen bg-gradient-hero flex items-center pt-16 sm:pt-20 overflow-hidden">
       {/* Hero background image */}
       <div className="absolute inset-0 opacity-30">
         <img 
@@ -40,50 +39,50 @@ export function Hero() {
       </div>
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-20">
-        <div className="text-center max-w-4xl mx-auto animate-fade-in-up">
+        <div className="text-center max-w-4xl mx-auto animate-fade-in-up px-2 sm:px-0">
           {/* Main heading */}
-          <h1 className={`text-4xl sm:text-5xl lg:text-7xl font-bold text-primary mb-6 leading-tight ${
+          <h1 className={`text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold text-primary mb-4 sm:mb-6 leading-tight px-2 ${
             isRTL ? 'font-arabic' : 'font-english'
           }`}>
             {t('hero.title')}
           </h1>
           
           {/* Subtitle */}
-          <p className={`text-xl sm:text-2xl lg:text-3xl text-primary/80 mb-8 font-medium ${
+          <p className={`text-lg sm:text-xl md:text-2xl lg:text-3xl text-primary/80 mb-6 sm:mb-8 font-medium px-2 ${
             isRTL ? 'font-arabic' : 'font-english'
           }`}>
             {t('hero.subtitle')}
           </p>
 
           {/* Description */}
-          <p className={`text-lg sm:text-xl text-foreground/70 mb-12 max-w-2xl mx-auto leading-relaxed ${
+          <p className={`text-base sm:text-lg md:text-xl text-foreground/70 mb-8 sm:mb-12 max-w-2xl mx-auto leading-relaxed px-4 ${
             isRTL ? 'font-arabic' : 'font-english'
           }`}>
             {t('hero.description')}
           </p>
 
           {/* CTAs */}
-          <div className="flex justify-center items-center mb-16">
+          <div className="flex justify-center items-center mb-12 sm:mb-16 px-4">
             <Button
               size="lg"
               onClick={() => window.open('https://wa.me/966570200611?text=مرحبا، أود%20الاستفسار%20عن%20خدمات%20هاوس%20ريفريش', '_blank')}
-              className="bg-primary hover:bg-primary-foreground hover:text-primary text-lg px-8 py-6 hover-lift transform hover:scale-105 transition-all duration-300"
+              className="bg-primary hover:bg-primary-foreground hover:text-primary text-base sm:text-lg px-6 sm:px-8 py-4 sm:py-6 hover-lift transform hover:scale-105 transition-all duration-300 w-full sm:w-auto max-w-sm"
             >
-              <MessageCircle className={`w-5 h-5 ${isRTL ? 'ml-3' : 'mr-3'}`} />
+              <MessageCircle className={`w-4 h-4 sm:w-5 sm:h-5 ${isRTL ? 'ml-2 sm:ml-3' : 'mr-2 sm:mr-3'}`} />
               {t('hero.cta.whatsapp')}
             </Button>
           </div>
 
           {/* Trust badges */}
-          <div className="flex justify-center items-center gap-4 max-w-3xl mx-auto">
+          <div className="flex justify-center items-center gap-4 sm:gap-6 max-w-3xl mx-auto px-4">
             {trustBadges.map((badge, index) => (
               <div
                 key={index}
-                className="flex flex-col items-center p-4 bg-card/50 backdrop-blur-sm rounded-xl border border-border/50 hover-lift min-w-[140px]"
+                className="flex flex-col items-center p-3 sm:p-4 bg-card/50 backdrop-blur-sm rounded-lg sm:rounded-xl border border-border/50 hover-lift min-w-[120px] sm:min-w-[140px]"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
-                <badge.icon className="w-6 h-6 text-primary mb-2" />
-                <span className={`text-sm font-medium text-center leading-tight ${
+                <badge.icon className="w-4 h-4 sm:w-6 sm:h-6 text-primary mb-1 sm:mb-2" />
+                <span className={`text-xs font-medium text-center leading-tight ${
                   isRTL ? 'font-arabic' : 'font-english'
                 }`}>
                   {badge.text}
