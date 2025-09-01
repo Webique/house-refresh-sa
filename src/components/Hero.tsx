@@ -76,15 +76,6 @@ export function Hero() {
               {t('hero.cta.whatsapp')}
             </Button>
             
-            <Button
-              size="lg"
-              variant="outline"
-              onClick={scrollToContact}
-              className="border-primary text-primary hover:bg-primary hover:text-primary-foreground text-lg px-8 py-6 hover-lift"
-            >
-              <FileText className={`w-5 h-5 ${isRTL ? 'ml-3' : 'mr-3'}`} />
-              {t('hero.cta.quote')}
-            </Button>
           </div>
 
           {/* Trust badges */}
