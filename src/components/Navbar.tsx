@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { useLanguage } from '@/hooks/useLanguage';
-import houseRefreshLogo from '@/assets/house-refresh-logo.svg';
+import houseRefreshLogo from '@/assets/house-refresh-logo.png';
 import { MessageCircle, Menu, X } from 'lucide-react';
 
 export function Navbar() {
