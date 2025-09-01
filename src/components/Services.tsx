@@ -32,11 +32,8 @@ export function Services() {
     },
   ];
 
-  const scrollToContact = () => {
-    const element = document.getElementById('contact');
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
+  const openWhatsApp = () => {
+    window.open('https://wa.me/966570200611?text=مرحبا، أود%20الاستفسار%20عن%20خدمات%20هاوس%20ريفريش%20و%20الحصول%20على%20عرض%20سعر', '_blank');
   };
 
   return (
@@ -83,7 +80,7 @@ export function Services() {
               <Button
                 size="sm"
                 variant="outline"
-                onClick={scrollToContact}
+                onClick={openWhatsApp}
                 className="w-full border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-all duration-300"
               >
                 {t('services.cta')}

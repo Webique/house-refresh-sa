@@ -58,7 +58,10 @@ export function Contact() {
                     <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center group-hover:bg-primary/20 transition-colors">
                       <item.icon className="w-5 h-5 text-primary" />
                     </div>
-                    <span className={isRTL ? 'font-arabic' : 'font-english'}>
+                    <span 
+                      className={isRTL ? 'font-arabic' : 'font-english'}
+                      dir={item.text.includes('+966') ? 'ltr' : undefined}
+                    >
                       {item.text}
                     </span>
                   </a>

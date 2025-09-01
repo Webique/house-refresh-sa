@@ -63,9 +63,7 @@ export function Hero() {
           </p>
 
           {/* CTAs */}
-          <div className={`flex flex-col sm:flex-row gap-4 justify-center items-center mb-16 ${
-            isRTL ? 'sm:flex-row-reverse' : ''
-          }`}>
+          <div className="flex justify-center items-center mb-16">
             <Button
               size="lg"
               onClick={() => window.open('https://wa.me/966570200611?text=مرحبا، أود%20الاستفسار%20عن%20خدمات%20هاوس%20ريفريش', '_blank')}
@@ -74,19 +72,18 @@ export function Hero() {
               <MessageCircle className={`w-5 h-5 ${isRTL ? 'ml-3' : 'mr-3'}`} />
               {t('hero.cta.whatsapp')}
             </Button>
-            
           </div>
 
           {/* Trust badges */}
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 max-w-3xl mx-auto">
+          <div className="flex justify-center items-center gap-4 max-w-3xl mx-auto">
             {trustBadges.map((badge, index) => (
               <div
                 key={index}
-                className="flex flex-col items-center p-4 bg-card/50 backdrop-blur-sm rounded-xl border border-border/50 hover-lift"
+                className="flex flex-col items-center p-4 bg-card/50 backdrop-blur-sm rounded-xl border border-border/50 hover-lift min-w-[140px]"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <badge.icon className="w-6 h-6 text-primary mb-2" />
-                <span className={`text-sm font-medium text-center ${
+                <span className={`text-sm font-medium text-center leading-tight ${
                   isRTL ? 'font-arabic' : 'font-english'
                 }`}>
                   {badge.text}

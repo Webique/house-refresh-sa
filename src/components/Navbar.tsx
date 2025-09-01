@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { useLanguage } from '@/hooks/useLanguage';
-import houseRefreshLogo from '@/assets/house-refresh-logo.png';
+
 import { MessageCircle, Menu, X } from 'lucide-react';
 
 export function Navbar() {
@@ -47,7 +47,7 @@ export function Navbar() {
           {/* Logo */}
           <div className={`flex items-center ${isRTL ? 'order-3' : 'order-1'}`}>
             <img 
-              src={houseRefreshLogo} 
+              src="/logo.png" 
               alt="House Refresh" 
               className="h-8 w-auto sm:h-10"
             />

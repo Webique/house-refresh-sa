@@ -1,5 +1,5 @@
 import { useLanguage } from '@/hooks/useLanguage';
-import houseRefreshLogo from '@/assets/house-refresh-logo.svg';
+
 import { Mail, Phone } from 'lucide-react';
 
 export function Footer() {
@@ -32,7 +32,7 @@ export function Footer() {
           <div className={`space-y-6 ${isRTL ? 'md:order-3' : 'md:order-1'}`}>
             <div>
               <img 
-                src={houseRefreshLogo} 
+                src="/logo.png" 
                 alt="House Refresh" 
                 className="h-10 w-auto mb-4"
               />
@@ -83,7 +83,10 @@ export function Footer() {
                     }`}
                   >
                     <item.icon className="w-4 h-4 flex-shrink-0" />
-                    <span className={`text-sm ${isRTL ? 'font-arabic' : 'font-english'}`}>
+                    <span 
+                      className={`text-sm ${isRTL ? 'font-arabic' : 'font-english'}`}
+                      dir={item.text.includes('+966') ? 'ltr' : undefined}
+                    >
                       {item.text}
                     </span>
                   </a>
