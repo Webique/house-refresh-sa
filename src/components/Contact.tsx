@@ -1,53 +1,9 @@
-import { useState } from 'react';
 import { useLanguage } from '@/hooks/useLanguage';
 import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Label } from '@/components/ui/label';
-import { Textarea } from '@/components/ui/textarea';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
-import { useToast } from '@/hooks/use-toast';
 import { MessageCircle, Mail, Phone, Globe } from 'lucide-react';
 
 export function Contact() {
   const { isRTL, t } = useLanguage();
-  const { toast } = useToast();
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [formData, setFormData] = useState({
-    name: '',
-    phone: '',
-    email: '',
-    property: '',
-    service: '',
-    message: '',
-  });
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 1000));
-
-    toast({
-      title: t('contact.form.success'),
-      duration: 5000,
-    });
-
-    setFormData({
-      name: '',
-      phone: '',
-      email: '',
-      property: '',
-      service: '',
-      message: '',
-    });
-
-    setIsSubmitting(false);
-  };
-
-  const handleInputChange = (field: string, value: string) => {
-    setFormData(prev => ({ ...prev, [field]: value }));
-  };
 
   const contactInfo = [
     {
@@ -89,115 +45,7 @@ export function Contact() {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
-          {/* Contact Form */}
-          <div className="bg-card rounded-2xl p-8 shadow-card border border-border/50">
-            <form onSubmit={handleSubmit} className="space-y-6">
-              <div className="grid sm:grid-cols-2 gap-4">
-                <div>
-                  <Label htmlFor="name" className={isRTL ? 'font-arabic' : 'font-english'}>
-                    {t('contact.form.name')}
-                  </Label>
-                  <Input
-                    id="name"
-                    value={formData.name}
-                    onChange={(e) => handleInputChange('name', e.target.value)}
-                    required
-                    className="mt-2"
-                    dir={isRTL ? 'rtl' : 'ltr'}
-                  />
-                </div>
-                <div>
-                  <Label htmlFor="phone" className={isRTL ? 'font-arabic' : 'font-english'}>
-                    {t('contact.form.phone')}
-                  </Label>
-                  <Input
-                    id="phone"
-                    type="tel"
-                    value={formData.phone}
-                    onChange={(e) => handleInputChange('phone', e.target.value)}
-                    required
-                    className="mt-2"
-                    dir="ltr"
-                  />
-                </div>
-              </div>
-
-              <div>
-                <Label htmlFor="email" className={isRTL ? 'font-arabic' : 'font-english'}>
-                  {t('contact.form.email')}
-                </Label>
-                <Input
-                  id="email"
-                  type="email"
-                  value={formData.email}
-                  onChange={(e) => handleInputChange('email', e.target.value)}
-                  required
-                  className="mt-2"
-                  dir="ltr"
-                />
-              </div>
-
-              <div className="grid sm:grid-cols-2 gap-4">
-                <div>
-                  <Label className={isRTL ? 'font-arabic' : 'font-english'}>
-                    {t('contact.form.property')}
-                  </Label>
-                  <Select value={formData.property} onValueChange={(value) => handleInputChange('property', value)}>
-                    <SelectTrigger className="mt-2">
-                      <SelectValue />
-                    </SelectTrigger>
-                    <SelectContent>
-                      <SelectItem value="home">{t('contact.form.property.home')}</SelectItem>
-                      <SelectItem value="office">{t('contact.form.property.office')}</SelectItem>
-                      <SelectItem value="new">{t('contact.form.property.new')}</SelectItem>
-                    </SelectContent>
-                  </Select>
-                </div>
-                <div>
-                  <Label className={isRTL ? 'font-arabic' : 'font-english'}>
-                    {t('contact.form.service')}
-                  </Label>
-                  <Select value={formData.service} onValueChange={(value) => handleInputChange('service', value)}>
-                    <SelectTrigger className="mt-2">
-                      <SelectValue />
-                    </SelectTrigger>
-                    <SelectContent>
-                      <SelectItem value="quick">{t('contact.form.service.quick')}</SelectItem>
-                      <SelectItem value="deep">{t('contact.form.service.deep')}</SelectItem>
-                      <SelectItem value="furniture">{t('contact.form.service.furniture')}</SelectItem>
-                      <SelectItem value="properties">{t('contact.form.service.properties')}</SelectItem>
-                      <SelectItem value="establishments">{t('contact.form.service.establishments')}</SelectItem>
-                    </SelectContent>
-                  </Select>
-                </div>
-              </div>
-
-              <div>
-                <Label htmlFor="message" className={isRTL ? 'font-arabic' : 'font-english'}>
-                  {t('contact.form.message')}
-                </Label>
-                <Textarea
-                  id="message"
-                  value={formData.message}
-                  onChange={(e) => handleInputChange('message', e.target.value)}
-                  rows={4}
-                  className="mt-2"
-                  dir={isRTL ? 'rtl' : 'ltr'}
-                />
-              </div>
-
-              <Button
-                type="submit"
-                size="lg"
-                disabled={isSubmitting}
-                className="w-full bg-primary hover:bg-primary-foreground hover:text-primary hover-lift"
-              >
-                {isSubmitting ? '...' : t('contact.form.submit')}
-              </Button>
-            </form>
-          </div>
-
+        <div className="max-w-2xl mx-auto">
           {/* Contact Information */}
           <div className="space-y-8">
             <div className="bg-card rounded-2xl p-8 shadow-card border border-border/50">
