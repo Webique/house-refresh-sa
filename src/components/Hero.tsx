@@ -7,8 +7,8 @@ export function Hero() {
   const { isRTL, t } = useLanguage();
 
   const trustBadges = [
-    { icon: Users, text: t('badge.team') },
-    { icon: Zap, text: t('badge.fast') },
+    { text: t('badge.team') },
+    { text: t('badge.fast') },
   ];
 
   const scrollToContact = () => {
@@ -81,7 +81,11 @@ export function Hero() {
                 className="flex flex-col items-center p-3 sm:p-4 bg-card/50 backdrop-blur-sm rounded-lg sm:rounded-xl border border-border/50 hover-lift min-w-[120px] sm:min-w-[140px]"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
-                <badge.icon className="w-4 h-4 sm:w-6 sm:h-6 text-primary mb-1 sm:mb-2" />
+                <img 
+                  src="/logo.png" 
+                  alt="House Refresh" 
+                  className="w-4 h-4 sm:w-6 sm:h-6 mb-1 sm:mb-2 object-contain"
+                />
                 <span className={`text-xs font-medium text-center leading-tight ${
                   isRTL ? 'font-arabic' : 'font-english'
                 }`}>
