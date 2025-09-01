@@ -69,7 +69,7 @@ export function Services() {
               </h3>
               
               <p className={`text-sm text-muted-foreground mb-4 ${
-                isRTL ? 'font-english text-left' : 'font-arabic text-right'
+                isRTL ? 'font-arabic text-right' : 'font-english text-left'
               }`}>
                 {service.subtitle}
               </p>

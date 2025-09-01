@@ -19,7 +19,7 @@ const translations = {
     'nav.about': 'من نحن',
     'nav.contact': 'تواصل معنا',
     'nav.whatsapp': 'واتساب',
-    'nav.language': 'العربية | English',
+    'nav.language': 'English',
 
     // Hero
     'hero.title': 'ﻫـــــــــﺎوس رﻳﻔـــــــــــــﺮش',
@@ -104,7 +104,7 @@ const translations = {
     'nav.about': 'About',
     'nav.contact': 'Contact',
     'nav.whatsapp': 'WhatsApp',
-    'nav.language': 'العربية | English',
+    'nav.language': 'العربية',
 
     // Hero
     'hero.title': 'House Refresh',
