@@ -1,6 +1,6 @@
 import { useLanguage } from '@/hooks/useLanguage';
 import houseRefreshLogo from '@/assets/house-refresh-logo.svg';
-import { MessageCircle, Mail, Phone, Globe } from 'lucide-react';
+import { Mail, Phone } from 'lucide-react';
 
 export function Footer() {
   const { isRTL, t } = useLanguage();
@@ -14,9 +14,7 @@ export function Footer() {
 
   const contactInfo = [
     { icon: Phone, text: '+966 57 020 0611', href: 'tel:+966570200611' },
-    { icon: MessageCircle, text: 'WhatsApp', href: 'https://wa.me/966570200611' },
     { icon: Mail, text: 'Refresh.house404@gmail.com', href: 'mailto:Refresh.house404@gmail.com' },
-    { icon: Globe, text: 'www.house-refreshes.com', href: 'https://www.house-refreshes.com' },
   ];
 
   const scrollToSection = (sectionId: string) => {
