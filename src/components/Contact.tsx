@@ -1,6 +1,6 @@
 import { useLanguage } from '@/hooks/useLanguage';
 import { Button } from '@/components/ui/button';
-import { MessageCircle, Mail, Phone, Globe } from 'lucide-react';
+import { MessageCircle, Mail, Phone } from 'lucide-react';
 
 export function Contact() {
   const { isRTL, t } = useLanguage();
@@ -12,19 +12,9 @@ export function Contact() {
       href: 'tel:+966570200611'
     },
     {
-      icon: MessageCircle,
-      text: 'WhatsApp',
-      href: 'https://wa.me/966570200611'
-    },
-    {
       icon: Mail,
       text: 'Refresh.house404@gmail.com',
       href: 'mailto:Refresh.house404@gmail.com'
-    },
-    {
-      icon: Globe,
-      text: 'www.house-refreshes.com',
-      href: 'https://www.house-refreshes.com'
     }
   ];
 
@@ -74,30 +64,6 @@ export function Contact() {
                   </a>
                 ))}
               </div>
-            </div>
-
-            {/* WhatsApp CTA */}
-            <div className="bg-success/10 rounded-2xl p-8 border border-success/20">
-              <h4 className={`text-xl font-bold text-success mb-4 ${
-                isRTL ? 'font-arabic text-right' : 'font-english text-left'
-              }`}>
-                {t('nav.whatsapp')}
-              </h4>
-              <p className={`text-foreground/80 mb-6 ${
-                isRTL ? 'font-arabic text-right' : 'font-english text-left'
-              }`}>
-                {isRTL 
-                  ? 'تواصل معنا مباشرة عبر واتساب للحصول على رد سريع'
-                  : 'Contact us directly via WhatsApp for quick response'
-                }
-              </p>
-              <Button
-                onClick={() => window.open('https://wa.me/966570200611?text=مرحبا، أود%20الاستفسار%20عن%20خدمات%20هاوس%20ريفريش', '_blank')}
-                className="w-full bg-success hover:bg-success/90 text-success-foreground"
-              >
-                <MessageCircle className={`w-5 h-5 ${isRTL ? 'ml-2' : 'mr-2'}`} />
-                {t('nav.whatsapp')}
-              </Button>
             </div>
           </div>
         </div>
