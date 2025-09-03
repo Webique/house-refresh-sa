@@ -52,18 +52,15 @@ const translations = {
 
     // Services
     'services.title': 'خدماتنا',
-    'services.establishments.title': 'خدمات مخصصة للمنشآت',
-    'services.establishments.subtitle': 'Establishments Services',
-    'services.establishments.description': 'حلول تنظيف دورية أو مخصصة للمكاتب، المعارض، والفروع، والمرافق العامة ضمن عقود تشغيلية أو زيارات مجدولة.',
-    'services.furniture.title': 'تنظيف المفروشات',
-    'services.furniture.subtitle': 'Sofa and Carpet Cleaning',
-    'services.furniture.description': 'إزالة البقع والروائح واستعادة الملمس والنظافة الأصلية باستخدام معدات خاصة وآمنة على الأقمشة.',
-    'services.properties.title': 'تنظيف المباني والعقارات الجديدة',
-    'services.properties.subtitle': 'Properties Cleaning',
-    'services.properties.description': 'خدمة مخصصة بعد الإنشاء أو الترميم تشمل إزالة بقايا المواد والتجهيز الكامل للتسليم والافتتاح أو السكن.',
-    'services.deep.title': 'النظافة السريعة والعميقة',
-    'services.deep.subtitle': 'Quick & Deep Cleaning',
-    'services.deep.description': 'تنظيف مرن وسريع يركز على المظهر العام، مع خدمات تفصيلية لإزالة الأوساخ المتراكمة وتعقيم شامل.',
+    'services.hotel.title': 'إدارة وتنظيف فندقي',
+    'services.hotel.subtitle': 'Hotel Management & Cleaning',
+    'services.hotel.description': 'خدمات إدارة وتنظيف فندقية متخصصة تضمن أعلى معايير النظافة والراحة للضيوف.',
+    'services.facilities.title': 'ادارة وتشغيل المرافق',
+    'services.facilities.subtitle': 'Facilities Management & Operation',
+    'services.facilities.description': 'إدارة وتشغيل المرافق باحترافية عالية مع صيانة دورية وخدمات متكاملة.',
+    'services.establishments.title': 'خدمات مخصصه للمنشأت',
+    'services.establishments.subtitle': 'Customized Establishment Services',
+    'services.establishments.description': 'حلول مخصصة للمنشآت التجارية والصناعية مع خدمات تنظيف وصيانة متخصصة.',
     'services.cta': 'احصل على عرض سعر',
 
     // Slogan
@@ -98,7 +95,7 @@ const translations = {
     'footer.rights': '© 2024 هاوس ريفرش. جميع الحقوق محفوظة.',
 
     // Clients
-    'clients.title': 'عملاؤنا',
+    'clients.title': 'شركاء النجاح',
   },
   en: {
     // Navigation
@@ -140,18 +137,15 @@ const translations = {
 
     // Services
     'services.title': 'Our Services',
-    'services.establishments.title': 'Establishments Services',
-    'services.establishments.subtitle': 'خدمات مخصصة للمنشآت',
-    'services.establishments.description': 'Scheduled or contract-based cleaning for offices, showrooms, branches, and public facilities.',
-    'services.furniture.title': 'Sofa & Carpet Cleaning',
-    'services.furniture.subtitle': 'تنظيف المفروشات',
-    'services.furniture.description': 'Stain and odor removal, restoring original softness and cleanliness with fabric-safe tools.',
-    'services.properties.title': 'Properties Cleaning (Post-Construction)',
-    'services.properties.subtitle': 'تنظيف المباني والعقارات الجديدة',
-    'services.properties.description': 'Debris removal and full handover preparation for openings or move-in.',
-    'services.deep.title': 'Quick & Deep Cleaning',
-    'services.deep.subtitle': 'النظافة السريعة والعميقة',
-    'services.deep.description': 'Flexible rapid clean focused on overall appearance + detailed deep clean for full disinfection.',
+    'services.hotel.title': 'Hotel Management & Cleaning',
+    'services.hotel.subtitle': 'إدارة وتنظيف فندقي',
+    'services.hotel.description': 'Specialized hotel management and cleaning services ensuring the highest standards of cleanliness and guest comfort.',
+    'services.facilities.title': 'Facilities Management & Operation',
+    'services.facilities.subtitle': 'ادارة وتشغيل المرافق',
+    'services.facilities.description': 'Professional facilities management and operation with regular maintenance and comprehensive services.',
+    'services.establishments.title': 'Customized Establishment Services',
+    'services.establishments.subtitle': 'خدمات مخصصه للمنشأت',
+    'services.establishments.description': 'Customized solutions for commercial and industrial establishments with specialized cleaning and maintenance services.',
     'services.cta': 'Get a Quote',
 
     // Slogan
@@ -186,7 +180,7 @@ const translations = {
     'footer.rights': '© 2024 House Refresh. All rights reserved.',
 
     // Clients
-    'clients.title': 'Our Clients',
+    'clients.title': 'Success Partners',
   }
 };
 

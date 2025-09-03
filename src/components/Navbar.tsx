@@ -37,11 +37,7 @@ export function Navbar() {
   ];
 
   return (
-    <nav 
-      className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-background/95 backdrop-blur-sm shadow-soft' : 'bg-background'
-      }`}
-    >
+    <nav className="fixed top-0 w-full z-50 bg-[#fffcdf] transition-all duration-300">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
@@ -59,7 +55,7 @@ export function Navbar() {
               <button
                 key={item.key}
                 onClick={() => scrollToSection(item.key)}
-                className={`text-foreground hover:text-primary transition-colors font-medium ${
+                className={`text-[#0c2a26] hover:text-[#0c2a26]/80 transition-colors font-medium ${
                   isRTL ? 'font-arabic' : 'font-english'
                 }`}
               >
@@ -72,13 +68,13 @@ export function Navbar() {
           <div className={`hidden lg:flex items-center space-x-4 ${isRTL ? 'space-x-reverse order-2' : 'order-3'}`}>
             <button
               onClick={toggleLanguage}
-              className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+              className="text-sm text-[#0c2a26]/70 hover:text-[#0c2a26] transition-colors"
             >
               {t('nav.language')}
             </button>
             <Button
               onClick={() => window.open('https://wa.me/966570200611?text=مرحبا، أود%20الاستفسار%20عن%20خدمات%20هاوس%20ريفريش', '_blank')}
-              className="bg-primary hover:bg-primary-foreground hover:text-primary hover-lift"
+              className="bg-[#0c2a26] hover:bg-[#0c2a26]/90 text-[#fffcdf] hover-lift"
             >
               <MessageCircle className="w-4 h-4 mr-2" />
               {t('nav.whatsapp')}
@@ -89,7 +85,7 @@ export function Navbar() {
           <div className={`lg:hidden ${isRTL ? 'order-1' : 'order-3'}`}>
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="text-foreground hover:text-primary transition-colors"
+              className="text-[#0c2a26] hover:text-[#0c2a26]/80 transition-colors"
             >
               {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
@@ -98,23 +94,23 @@ export function Navbar() {
 
         {/* Mobile menu */}
         {isMobileMenuOpen && (
-          <div className="lg:hidden absolute top-full left-0 right-0 bg-background/95 backdrop-blur-sm border-t border-border shadow-soft">
+          <div className="lg:hidden absolute top-full left-0 right-0 bg-[#fffcdf] border-t border-[#0c2a26]/20 shadow-soft">
             <div className="px-4 py-6 space-y-4">
               {navItems.map((item) => (
                 <button
                   key={item.key}
                   onClick={() => scrollToSection(item.key)}
-                  className={`block w-full text-left text-foreground hover:text-primary transition-colors font-medium py-2 ${
+                  className={`block w-full text-left text-[#0c2a26] hover:text-[#0c2a26]/80 transition-colors font-medium py-2 ${
                     isRTL ? 'font-arabic text-right' : 'font-english text-left'
                   }`}
                 >
                   {item.label}
                 </button>
               ))}
-              <div className="pt-4 border-t border-border space-y-3">
+              <div className="pt-4 border-t border-[#0c2a26]/20 space-y-3">
                 <button
                   onClick={toggleLanguage}
-                  className={`block w-full text-sm text-muted-foreground hover:text-foreground transition-colors py-2 ${
+                  className={`block w-full text-sm text-[#0c2a26]/70 hover:text-[#0c2a26] transition-colors py-2 ${
                     isRTL ? 'text-right' : 'text-left'
                   }`}
                 >
@@ -122,7 +118,7 @@ export function Navbar() {
                 </button>
                 <Button
                   onClick={() => window.open('https://wa.me/966570200611?text=مرحبا، أود%20الاستفسار%20عن%20خدمات%20هاوس%20ريفريش', '_blank')}
-                  className="w-full bg-primary hover:bg-primary-foreground hover:text-primary"
+                  className="w-full bg-[#0c2a26] hover:bg-[#0c2a26]/90 text-[#fffcdf]"
                 >
                   <MessageCircle className="w-4 h-4 mr-2" />
                   {t('nav.whatsapp')}

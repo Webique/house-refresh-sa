@@ -1,22 +1,28 @@
 import { useLanguage } from '@/hooks/useLanguage';
 import { Button } from '@/components/ui/button';
-import { Building2, Home } from 'lucide-react';
+import { Building2, Wrench, Hotel } from 'lucide-react';
 
 export function Services() {
   const { isRTL, t } = useLanguage();
 
   const services = [
     {
+      icon: Hotel,
+      title: t('services.hotel.title'),
+      subtitle: t('services.hotel.subtitle'),
+      description: t('services.hotel.description'),
+    },
+    {
+      icon: Wrench,
+      title: t('services.facilities.title'),
+      subtitle: t('services.facilities.subtitle'),
+      description: t('services.facilities.description'),
+    },
+    {
       icon: Building2,
       title: t('services.establishments.title'),
       subtitle: t('services.establishments.subtitle'),
       description: t('services.establishments.description'),
-    },
-    {
-      icon: Home,
-      title: t('services.properties.title'),
-      subtitle: t('services.properties.subtitle'),
-      description: t('services.properties.description'),
     },
   ];
 
@@ -36,7 +42,7 @@ export function Services() {
           <div className="w-24 h-1 bg-primary mx-auto rounded-full" />
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {services.map((service, index) => (
             <div
               key={index}

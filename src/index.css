@@ -2,31 +2,31 @@
 @tailwind components;
 @tailwind utilities;
 
-/* House Refresh Design System - Premium cleaning services brand */
+/* House Refresh Design System - Premium cleaning services brand - Dark Theme */
 
 @layer base {
   :root {
-    /* Brand Colors */
-    --background: 52 67% 95%; /* #fffcdf beige */
-    --foreground: 165 42% 11%; /* #0c2a26 deep green */
+    /* Brand Colors - Dark Theme */
+    --background: 165 42% 8%; /* Dark green background */
+    --foreground: 52 67% 95%; /* Light beige text */
 
-    --card: 52 67% 97%;
-    --card-foreground: 165 42% 11%;
+    --card: 165 42% 10%;
+    --card-foreground: 52 67% 95%;
 
-    --popover: 52 67% 97%;
-    --popover-foreground: 165 42% 11%;
+    --popover: 165 42% 10%;
+    --popover-foreground: 52 67% 95%;
 
-    --primary: 165 42% 11%; /* #0c2a26 deep green */
-    --primary-foreground: 52 67% 95%;
+    --primary: 52 67% 90%; /* Light beige as primary */
+    --primary-foreground: 165 42% 8%;
 
-    --secondary: 52 67% 95%;
-    --secondary-foreground: 165 42% 11%;
+    --secondary: 165 42% 12%;
+    --secondary-foreground: 52 67% 90%;
 
-    --muted: 52 67% 92%;
-    --muted-foreground: 165 20% 45%;
+    --muted: 165 42% 15%;
+    --muted-foreground: 52 67% 70%;
 
-    --accent: 52 67% 90%;
-    --accent-foreground: 165 42% 11%;
+    --accent: 165 42% 12%;
+    --accent-foreground: 52 67% 90%;
 
     --success: 142 76% 36%;
     --success-foreground: 52 67% 95%;
@@ -34,95 +34,53 @@
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 52 67% 95%;
 
-    --border: 165 42% 11% / 0.08; /* rgba(12,42,38,0.08) */
-    --input: 165 42% 11% / 0.1;
-    --ring: 165 42% 11%;
+    --border: 52 67% 95% / 0.1;
+    --input: 52 67% 95% / 0.1;
+    --ring: 52 67% 90%;
 
     --radius: 0.75rem;
 
     /* Custom Brand Variables */
     --brand-beige: 52 67% 95%;
-    --brand-green: 165 42% 11%;
-    --brand-green-light: 165 42% 15%;
-    --brand-neutral: 165 42% 11% / 0.08;
+    --brand-green: 165 42% 8%;
+    --brand-green-light: 165 42% 12%;
+    --brand-neutral: 52 67% 95% / 0.1;
     
     /* Gradients */
-    --gradient-hero: linear-gradient(135deg, hsl(var(--background)), hsl(52 67% 92%));
-    --gradient-card: linear-gradient(145deg, hsl(var(--card)), hsl(52 67% 98%));
-    
-    /* Shadows */
-    --shadow-soft: 0 4px 20px hsl(var(--brand-green) / 0.08);
-    --shadow-card: 0 8px 30px hsl(var(--brand-green) / 0.12);
-    --shadow-hover: 0 12px 40px hsl(var(--brand-green) / 0.18);
-
-    --sidebar-background: 0 0% 98%;
-    --sidebar-foreground: 240 5.3% 26.1%;
-    --sidebar-primary: 240 5.9% 10%;
-    --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 240 4.8% 95.9%;
-    --sidebar-accent-foreground: 240 5.9% 10%;
-    --sidebar-border: 220 13% 91%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --gradient-hero: linear-gradient(135deg, hsl(var(--background)), hsl(165 42% 10%));
+    --gradient-card: linear-gradient(135deg, hsl(var(--card)), hsl(165 42% 12%));
+    --gradient-button: linear-gradient(135deg, hsl(var(--primary)), hsl(52 67% 85%));
   }
 
-  /* RTL Support */
-  [dir="rtl"] {
-    --text-align-start: right;
-    --text-align-end: left;
-  }
-  
-  [dir="ltr"] {
-    --text-align-start: left;
-    --text-align-end: right;
-  }
-}
-
-@layer base {
   * {
     @apply border-border;
   }
 
-  html {
-    font-family: 'Inter', 'Tajawal', system-ui, sans-serif;
-    scroll-behavior: smooth;
-  }
-
   body {
-    @apply bg-background text-foreground font-normal;
-    line-height: 1.6;
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
   }
 
   /* Typography */
   .font-arabic {
-    font-family: 'Tajawal', system-ui, sans-serif;
+    font-family: 'Cairo', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 400;
   }
 
   .font-english {
-    font-family: 'Inter', system-ui, sans-serif;
+    font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 400;
   }
 
-  /* RTL/LTR utilities */
-  .text-start {
-    text-align: var(--text-align-start);
+  /* Custom Animations */
+  @keyframes sparkle {
+    0%, 100% { opacity: 0.3; transform: scale(1); }
+    50% { opacity: 0.8; transform: scale(1.1); }
   }
 
-  .text-end {
-    text-align: var(--text-align-end);
-  }
-
-  /* Smooth animations */
-  .animate-float {
-    animation: float 6s ease-in-out infinite;
-  }
-
-  .animate-sparkle {
-    animation: sparkle 3s ease-in-out infinite;
-  }
-
-  .animate-fade-in-up {
-    animation: fadeInUp 0.6s ease-out forwards;
-    opacity: 0;
-    transform: translateY(30px);
+  @keyframes fade-in-up {
+    0% { opacity: 0; transform: translateY(30px); }
+    100% { opacity: 1; transform: translateY(0); }
   }
 
   @keyframes float {
@@ -130,34 +88,75 @@
     50% { transform: translateY(-10px); }
   }
 
-  @keyframes sparkle {
-    0%, 100% { opacity: 0.4; transform: scale(1); }
-    50% { opacity: 1; transform: scale(1.2); }
+  .animate-sparkle {
+    animation: sparkle 3s ease-in-out infinite;
   }
 
-  @keyframes fadeInUp {
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
+  .animate-fade-in-up {
+    animation: fade-in-up 0.8s ease-out forwards;
   }
 
-  /* Hover effects */
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  /* Custom Utilities */
   .hover-lift {
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    @apply transition-all duration-300 hover:transform hover:scale-105 hover:shadow-lg;
   }
 
-  .hover-lift:hover {
-    transform: translateY(-4px);
-    box-shadow: var(--shadow-hover);
+  .shadow-card {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
   }
 
-  /* Gradient backgrounds */
+  .shadow-button {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  }
+
+  /* Gradient Backgrounds */
   .bg-gradient-hero {
     background: var(--gradient-hero);
   }
 
   .bg-gradient-card {
     background: var(--gradient-card);
+  }
+
+  .bg-gradient-button {
+    background: var(--gradient-button);
+  }
+
+  /* Navbar Custom Colors - Light Theme */
+  .bg-beige-navbar {
+    background-color: hsl(52 67% 95%); /* Light beige background */
+  }
+
+  .text-green-navbar {
+    color: hsl(165 42% 11%); /* Dark green text */
+  }
+
+  .bg-green-navbar {
+    background-color: hsl(165 42% 11%); /* Dark green background */
+  }
+
+  .text-beige-navbar {
+    color: hsl(52 67% 95%); /* Light beige text */
+  }
+
+  /* Custom Scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-muted;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-muted-foreground rounded-full;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-primary;
   }
 }
