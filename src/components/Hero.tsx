@@ -1,6 +1,6 @@
 import { Button } from '@/components/ui/button';
 import { useLanguage } from '@/hooks/useLanguage';
-import { MessageCircle, FileText, Sparkles, Users, Zap } from 'lucide-react';
+import { MessageCircle, ShoppingBag } from 'lucide-react';
 import heroImage from '@/assets/hero-cleaning-interior.jpg';
 
 export function Hero() {
@@ -57,14 +57,24 @@ export function Hero() {
           </p>
 
           {/* CTAs */}
-          <div className="flex justify-center items-center px-4">
+          <div className="flex flex-col sm:flex-row justify-center items-center gap-4 px-4">
             <Button
               size="lg"
               onClick={() => window.open('https://wa.me/966570200611?text=مرحبا، أود%20الاستفسار%20عن%20خدمات%20هاوس%20ريفريش', '_blank')}
-              className="bg-primary hover:bg-primary-foreground hover:text-primary text-base sm:text-lg px-6 sm:px-8 py-4 sm:py-6 hover-lift transform hover:scale-105 transition-all duration-300 w-full sm:w-auto max-w-sm"
+              className="bg-primary hover:bg-primary-foreground hover:text-primary text-base sm:text-lg px-6 sm:px-8 py-4 sm:py-6 hover-lift transform hover:scale-105 transition-all duration-300 w-full sm:w-auto"
             >
               <MessageCircle className={`w-4 h-4 sm:w-5 sm:h-5 ${isRTL ? 'ml-2 sm:ml-3' : 'mr-2 sm:mr-3'}`} />
               {t('hero.cta.whatsapp')}
+            </Button>
+            
+            <Button
+              size="lg"
+              variant="outline"
+              onClick={() => window.open('https://www.house-refreshes.com', '_blank')}
+              className="border-primary text-primary hover:bg-primary hover:text-primary-foreground text-base sm:text-lg px-6 sm:px-8 py-4 sm:py-6 hover-lift transform hover:scale-105 transition-all duration-300 w-full sm:w-auto"
+            >
+              <ShoppingBag className={`w-4 h-4 sm:w-5 sm:h-5 ${isRTL ? 'ml-2 sm:ml-3' : 'mr-2 sm:mr-3'}`} />
+              رابط متجرنا
             </Button>
           </div>
         </div>
