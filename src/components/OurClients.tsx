@@ -11,15 +11,15 @@ export function OurClients() {
   ];
 
   return (
-    <section id="clients" className="py-12 lg:py-16 bg-gradient-card">
+    <section id="clients" className="py-12 lg:py-16 bg-[#fffcdf]">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-8 lg:mb-12">
-          <h2 className={`text-2xl sm:text-3xl lg:text-4xl font-bold text-primary mb-4 ${
+          <h2 className={`text-2xl sm:text-3xl lg:text-4xl font-bold text-[#0c2a26] mb-4 ${
             isRTL ? 'font-arabic' : 'font-english'
           }`}>
             {t('clients.title')}
           </h2>
-          <div className="w-16 h-1 bg-primary mx-auto rounded-full" />
+          <div className="w-16 h-1 bg-[#0c2a26] mx-auto rounded-full" />
         </div>
 
         {/* Clients Grid */}
@@ -27,7 +27,7 @@ export function OurClients() {
           {clients.map((client, index) => (
             <div
               key={index}
-              className="bg-card rounded-xl p-4 lg:p-6 shadow-card hover-lift border border-border/50 flex items-center justify-center"
+              className="bg-white rounded-xl p-4 lg:p-6 shadow-lg hover:shadow-xl border border-[#0c2a26]/10 flex items-center justify-center transition-all duration-300 hover:scale-105"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <img
