@@ -36,12 +36,9 @@ export function Footer() {
                 alt="House Refresh" 
                 className="h-10 w-auto mb-4"
               />
-              <h3 className={`text-xl font-bold mb-2 ${isRTL ? 'font-arabic' : 'font-english'}`}>
+              <h3 className={`text-xl font-bold ${isRTL ? 'font-arabic' : 'font-english'}`}>
                 {t('footer.company')}
               </h3>
-              <p className={`text-primary-foreground/80 ${isRTL ? 'font-arabic text-right' : 'font-english text-left'}`}>
-                {t('footer.description')}
-              </p>
             </div>
           </div>
 
