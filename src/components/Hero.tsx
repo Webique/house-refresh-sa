@@ -40,7 +40,7 @@ export function Hero() {
             <img 
               src="/1.png" 
               alt="House Refresh Logo" 
-              className="h-24 sm:h-28 md:h-32 lg:h-36 w-auto object-contain opacity-90"
+              className="h-24 sm:h-28 md:h-32 lg:h-36 w-auto object-contain opacity-30"
             />
           </div>
           
