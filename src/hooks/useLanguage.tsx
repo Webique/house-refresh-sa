@@ -22,9 +22,9 @@ const translations = {
     'nav.language': 'English',
 
     // Hero
-    'hero.title': 'ﻫـــــــــﺎوس رﻳﻔـــــــــــــﺮش',
-    'hero.subtitle': 'ومعايير عالية الجودة.',
-    'hero.description': 'شركة سعودية متخصصة في تقديم خدمات النظافة الاحترافية بأساليب عصرية ومعايير عالية الجودة.',
+    'hero.title': 'هاوس ريفرش ومعايير عالية الجودة',
+    'hero.subtitle': 'هاوس ريفرش تضع معايير عالية في إدارة الممتلكات، بلمسة تجمع الدقة والفخامة.',
+    'hero.description': 'ندير المرافق واتحاد الملاك باحترافية تضمن الاستدامة والراحة، مع عناية فندقية تحافظ على جودة الحياة',
     'hero.cta.whatsapp': 'تواصل عبر واتساب',
     'hero.cta.quote': 'احصل على عرض سعر',
 
@@ -96,6 +96,9 @@ const translations = {
     'footer.links': 'روابط سريعة',
     'footer.website': 'الموقع الإلكتروني',
     'footer.rights': '© 2024 هاوس ريفرش. جميع الحقوق محفوظة.',
+
+    // Clients
+    'clients.title': 'عملاؤنا',
   },
   en: {
     // Navigation
@@ -181,6 +184,9 @@ const translations = {
     'footer.links': 'Quick Links',
     'footer.website': 'Website',
     'footer.rights': '© 2024 House Refresh. All rights reserved.',
+
+    // Clients
+    'clients.title': 'Our Clients',
   }
 };
 

@@ -6,11 +6,6 @@ import heroImage from '@/assets/hero-cleaning-interior.jpg';
 export function Hero() {
   const { isRTL, t } = useLanguage();
 
-  const trustBadges = [
-    { text: t('badge.team') },
-    { text: t('badge.fast') },
-  ];
-
   const scrollToContact = () => {
     const element = document.getElementById('contact');
     if (element) {
@@ -48,21 +43,21 @@ export function Hero() {
           </h1>
           
           {/* Subtitle */}
-          <p className={`text-lg sm:text-xl md:text-2xl lg:text-3xl text-primary/80 mb-6 sm:mb-8 font-medium px-2 ${
+          <p className={`text-lg sm:text-xl md:text-2xl lg:text-3xl text-primary/80 mb-4 sm:mb-6 font-medium px-2 ${
             isRTL ? 'font-arabic' : 'font-english'
           }`}>
             {t('hero.subtitle')}
           </p>
 
           {/* Description */}
-          <p className={`text-base sm:text-lg md:text-xl text-foreground/70 mb-8 sm:mb-12 max-w-2xl mx-auto leading-relaxed px-4 ${
+          <p className={`text-lg sm:text-xl md:text-2xl lg:text-3xl text-primary/80 mb-8 sm:mb-12 max-w-3xl mx-auto leading-relaxed px-4 ${
             isRTL ? 'font-arabic' : 'font-english'
           }`}>
             {t('hero.description')}
           </p>
 
           {/* CTAs */}
-          <div className="flex justify-center items-center mb-12 sm:mb-16 px-4">
+          <div className="flex justify-center items-center px-4">
             <Button
               size="lg"
               onClick={() => window.open('https://wa.me/966570200611?text=مرحبا، أود%20الاستفسار%20عن%20خدمات%20هاوس%20ريفريش', '_blank')}
@@ -71,28 +66,6 @@ export function Hero() {
               <MessageCircle className={`w-4 h-4 sm:w-5 sm:h-5 ${isRTL ? 'ml-2 sm:ml-3' : 'mr-2 sm:mr-3'}`} />
               {t('hero.cta.whatsapp')}
             </Button>
-          </div>
-
-          {/* Trust badges */}
-          <div className="flex justify-center items-center gap-4 sm:gap-6 max-w-3xl mx-auto px-4">
-            {trustBadges.map((badge, index) => (
-              <div
-                key={index}
-                className="flex flex-col items-center p-3 sm:p-4 bg-card/50 backdrop-blur-sm rounded-lg sm:rounded-xl border border-border/50 hover-lift min-w-[120px] sm:min-w-[140px]"
-                style={{ animationDelay: `${index * 0.1}s` }}
-              >
-                <img 
-                  src="/logo.png" 
-                  alt="House Refresh" 
-                  className="w-4 h-4 sm:w-6 sm:h-6 mb-1 sm:mb-2 object-contain"
-                />
-                <span className={`text-xs font-medium text-center leading-tight ${
-                  isRTL ? 'font-arabic' : 'font-english'
-                }`}>
-                  {badge.text}
-                </span>
-              </div>
-            ))}
           </div>
         </div>
       </div>
