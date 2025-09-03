@@ -22,7 +22,7 @@ export function Hero() {
           alt="Premium clean interior" 
           className="w-full h-full object-cover object-center"
         />
-        <div className={`absolute inset-0 ${isRTL ? 'bg-gradient-to-l from-background/80 to-background/60' : 'bg-gradient-to-r from-background/80 to-background/60'}`} />
+        <div className={`absolute inset-0 ${isRTL ? 'bg-gradient-to-l from-background/70 to-background/50' : 'bg-gradient-to-r from-background/70 to-background/50'}`} />
       </div>
 
       {/* Floating decorative elements */}
@@ -35,6 +35,15 @@ export function Hero() {
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-20">
         <div className={`max-w-4xl mx-auto animate-fade-in-up px-2 sm:px-0 ${isRTL ? 'text-right' : 'text-center'}`}>
+          {/* Logo */}
+          <div className="mb-20 sm:mb-24 flex justify-center -mt-16 sm:-mt-20">
+            <img 
+              src="/1.png" 
+              alt="House Refresh Logo" 
+              className="h-24 sm:h-28 md:h-32 lg:h-36 w-auto object-contain opacity-90"
+            />
+          </div>
+          
           {/* Main heading */}
           <h1 className={`text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold text-primary mb-4 sm:mb-6 leading-tight px-2 ${
             isRTL ? 'font-arabic' : 'font-english'

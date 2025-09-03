@@ -1,6 +1,6 @@
 import { useLanguage } from '@/hooks/useLanguage';
 import { Button } from '@/components/ui/button';
-import { Building2, Wrench, Hotel } from 'lucide-react';
+import { Building2, Wrench, Hotel, Users } from 'lucide-react';
 
 export function Services() {
   const { isRTL, t } = useLanguage();
@@ -24,6 +24,12 @@ export function Services() {
       subtitle: t('services.establishments.subtitle'),
       description: t('services.establishments.description'),
     },
+    {
+      icon: Users,
+      title: t('services.owners.title'),
+      subtitle: t('services.owners.subtitle'),
+      description: t('services.owners.description'),
+    },
   ];
 
   const openWhatsApp = () => {
@@ -42,7 +48,7 @@ export function Services() {
           <div className="w-24 h-1 bg-primary mx-auto rounded-full" />
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <div className="grid md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 gap-8 max-w-7xl mx-auto">
           {services.map((service, index) => (
             <div
               key={index}

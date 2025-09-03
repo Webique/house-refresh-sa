@@ -22,7 +22,7 @@ const translations = {
     'nav.language': 'English',
 
     // Hero
-    'hero.title': 'هاوس ريفرش كو. ومعايير عالية الجودة',
+    'hero.title': 'هاوس ريفرش',
     'hero.subtitle': 'هاوس ريفرش كو. تضع معايير عالية في إدارة الممتلكات، بلمسة تجمع الدقة والفخامة.',
     'hero.description': 'ندير المرافق واتحاد الملاك باحترافية تضمن الاستدامة والراحة، مع عناية فندقية تحافظ على جودة الحياة',
     'hero.cta.whatsapp': 'تواصل عبر واتساب',
@@ -61,6 +61,9 @@ const translations = {
     'services.establishments.title': 'خدمات مخصصه للمنشأت',
     'services.establishments.subtitle': 'Customized Establishment Services',
     'services.establishments.description': 'حلول مخصصة للمنشآت التجارية والصناعية مع خدمات تنظيف وصيانة متخصصة.',
+    'services.owners.title': 'إدارة اتحاد الملاك',
+    'services.owners.subtitle': 'Owners Association Management',
+    'services.owners.description': 'عبر منصة ملاك، بتنظيم احترافي يضمن صيانة المرافق، متابعة الالتزامات النظامية، وتحقيق جودة الحياة للملاك والسكان',
     'services.cta': 'احصل على عرض سعر',
 
     // Slogan
@@ -146,6 +149,9 @@ const translations = {
     'services.establishments.title': 'Customized Establishment Services',
     'services.establishments.subtitle': 'خدمات مخصصه للمنشأت',
     'services.establishments.description': 'Customized solutions for commercial and industrial establishments with specialized cleaning and maintenance services.',
+    'services.owners.title': 'Owners Association Management',
+    'services.owners.subtitle': 'إدارة اتحاد الملاك',
+    'services.owners.description': 'Through the Malaak platform, with professional organization that ensures facility maintenance, regulatory compliance monitoring, and achieving quality of life for owners and residents.',
     'services.cta': 'Get a Quote',
 
     // Slogan
