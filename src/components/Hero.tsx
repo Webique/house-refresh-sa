@@ -22,19 +22,19 @@ export function Hero() {
           alt="Premium clean interior" 
           className="w-full h-full object-cover object-center"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-background/80 to-background/60" />
+        <div className={`absolute inset-0 ${isRTL ? 'bg-gradient-to-l from-background/80 to-background/60' : 'bg-gradient-to-r from-background/80 to-background/60'}`} />
       </div>
 
       {/* Floating decorative elements */}
       <div className="absolute inset-0 pointer-events-none z-10">
-        <div className="absolute top-1/4 left-1/4 w-2 h-2 bg-primary/20 rounded-full animate-sparkle" />
-        <div className="absolute top-1/3 right-1/3 w-1 h-1 bg-primary/30 rounded-full animate-sparkle" style={{ animationDelay: '1s' }} />
-        <div className="absolute bottom-1/3 left-1/3 w-1.5 h-1.5 bg-primary/25 rounded-full animate-sparkle" style={{ animationDelay: '2s' }} />
-        <div className="absolute top-2/3 right-1/4 w-1 h-1 bg-primary/20 rounded-full animate-sparkle" style={{ animationDelay: '0.5s' }} />
+        <div className={`absolute top-1/4 w-2 h-2 bg-primary/20 rounded-full animate-sparkle ${isRTL ? 'right-1/4' : 'left-1/4'}`} />
+        <div className={`absolute top-1/3 w-1 h-1 bg-primary/30 rounded-full animate-sparkle ${isRTL ? 'left-1/3' : 'right-1/3'}`} style={{ animationDelay: '1s' }} />
+        <div className={`absolute bottom-1/3 w-1.5 h-1.5 bg-primary/25 rounded-full animate-sparkle ${isRTL ? 'right-1/3' : 'left-1/3'}`} style={{ animationDelay: '2s' }} />
+        <div className={`absolute top-2/3 w-1 h-1 bg-primary/20 rounded-full animate-sparkle ${isRTL ? 'right-1/4' : 'left-1/4'}`} style={{ animationDelay: '0.5s' }} />
       </div>
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-20">
-        <div className="text-center max-w-4xl mx-auto animate-fade-in-up px-2 sm:px-0">
+        <div className={`max-w-4xl mx-auto animate-fade-in-up px-2 sm:px-0 ${isRTL ? 'text-right' : 'text-center'}`}>
           {/* Main heading */}
           <h1 className={`text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold text-primary mb-4 sm:mb-6 leading-tight px-2 ${
             isRTL ? 'font-arabic' : 'font-english'
@@ -57,7 +57,7 @@ export function Hero() {
           </p>
 
           {/* CTAs */}
-          <div className="flex flex-col sm:flex-row justify-center items-center gap-4 px-4">
+          <div className={`flex flex-col sm:flex-row items-center gap-4 px-4 ${isRTL ? 'justify-end sm:flex-row-reverse' : 'justify-center'}`}>
             <Button
               size="lg"
               onClick={() => window.open('https://wa.me/966570200611?text=مرحبا، أود%20الاستفسار%20عن%20خدمات%20هاوس%20ريفريش', '_blank')}
