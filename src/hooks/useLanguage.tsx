@@ -22,8 +22,8 @@ const translations = {
     'nav.language': 'English',
 
     // Hero
-    'hero.title': 'هاوس ريفرش ومعايير عالية الجودة',
-    'hero.subtitle': 'هاوس ريفرش تضع معايير عالية في إدارة الممتلكات، بلمسة تجمع الدقة والفخامة.',
+    'hero.title': 'هاوس ريفرش كو. ومعايير عالية الجودة',
+    'hero.subtitle': 'هاوس ريفرش كو. تضع معايير عالية في إدارة الممتلكات، بلمسة تجمع الدقة والفخامة.',
     'hero.description': 'ندير المرافق واتحاد الملاك باحترافية تضمن الاستدامة والراحة، مع عناية فندقية تحافظ على جودة الحياة',
     'hero.cta.whatsapp': 'تواصل عبر واتساب',
     'hero.cta.quote': 'احصل على عرض سعر',
@@ -35,7 +35,7 @@ const translations = {
     'badge.saudi': 'شركة سعودية',
 
     // About
-    'about.title': 'هاوس ريفرش ومعايير عالية الجودة',
+    'about.title': 'هاوس ريفرش كو. ومعايير عالية الجودة',
     'about.content': 'شركة سعودية متخصصة في تقديم خدمات النظافة الاحترافية بأساليب عصرية. نوفر حلول النظافة والصيانة المتكاملة من خلال فريق عمل مدرّب وتجهيزات متقدمة، ومواد آمنة وصديقة للبيئة تناسب البيوت والمكاتب والعقارات الجديدة.',
 
     // Values
@@ -87,12 +87,12 @@ const translations = {
     'contact.form.success': 'شكراً! سنتواصل معك قريباً عبر واتساب أو البريد الإلكتروني.',
 
     // Footer
-    'footer.company': 'هاوس ريفرش',
+    'footer.company': 'هاوس ريفرش كو.',
     'footer.description': 'خدمات تنظيف احترافية بمعايير عالية الجودة',
     'footer.contact': 'معلومات التواصل',
     'footer.links': 'روابط سريعة',
     'footer.website': 'الموقع الإلكتروني',
-    'footer.rights': '© 2024 هاوس ريفرش. جميع الحقوق محفوظة.',
+    'footer.rights': '© 2024 هاوس ريفرش كو. جميع الحقوق محفوظة.',
 
     // Clients
     'clients.title': 'شركاء النجاح',
@@ -172,12 +172,12 @@ const translations = {
     'contact.form.success': 'Thanks! We\'ll get back to you shortly on WhatsApp or email.',
 
     // Footer
-    'footer.company': 'House Refresh',
+    'footer.company': 'House Refresh Co.',
     'footer.description': 'Professional cleaning services with high quality standards',
     'footer.contact': 'Contact Information',
     'footer.links': 'Quick Links',
     'footer.website': 'Website',
-    'footer.rights': '© 2024 House Refresh. All rights reserved.',
+    'footer.rights': '© 2024 House Refresh Co. All rights reserved.',
 
     // Clients
     'clients.title': 'Success Partners',
