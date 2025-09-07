@@ -5,6 +5,7 @@ import { OurClients } from '@/components/OurClients';
 import { Slogan } from '@/components/Slogan';
 import { Contact } from '@/components/Contact';
 import { Footer } from '@/components/Footer';
+import { LanguageSwitcher } from '@/components/LanguageSwitcher';
 
 const Index = () => {
   return (
@@ -16,6 +17,7 @@ const Index = () => {
       <Slogan />
       <Contact />
       <Footer />
+      <LanguageSwitcher />
     </div>
   );
 };

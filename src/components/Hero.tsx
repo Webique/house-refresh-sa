@@ -83,7 +83,7 @@ export function Hero() {
               className="border-primary text-primary hover:bg-primary hover:text-primary-foreground text-base sm:text-lg px-6 sm:px-8 py-4 sm:py-6 hover-lift transform hover:scale-105 transition-all duration-300 w-full sm:w-auto"
             >
               <ShoppingBag className={`w-4 h-4 sm:w-5 sm:h-5 ${isRTL ? 'ml-2 sm:ml-3' : 'mr-2 sm:mr-3'}`} />
-              رابط متجرنا
+              {t('hero.cta.store')}
             </Button>
           </div>
         </div>

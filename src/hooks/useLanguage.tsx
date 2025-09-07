@@ -27,6 +27,7 @@ const translations = {
     'hero.description': 'ندير المرافق واتحاد الملاك باحترافية تضمن الاستدامة والراحة، مع عناية فندقية تحافظ على جودة الحياة',
     'hero.cta.whatsapp': 'تواصل عبر واتساب',
     'hero.cta.quote': 'احصل على عرض سعر',
+    'hero.cta.store': 'رابط متجرنا',
 
     // Trust badges
     'badge.eco': 'صديق للبيئة',
@@ -115,6 +116,7 @@ const translations = {
     'hero.description': 'A Saudi company specializing in modern, professional cleaning services with high quality standards.',
     'hero.cta.whatsapp': 'Contact via WhatsApp',
     'hero.cta.quote': 'Request a Quote',
+    'hero.cta.store': 'Store Link',
 
     // Trust badges
     'badge.eco': 'Eco-Friendly',

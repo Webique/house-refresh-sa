@@ -15,6 +15,11 @@ export function Contact() {
       icon: Mail,
       text: 'Refresh.house404@gmail.com',
       href: 'mailto:Refresh.house404@gmail.com'
+    },
+    {
+      icon: MessageCircle,
+      text: '+966 57 020 0611',
+      href: 'https://wa.me/966570200611?text=مرحبا، أود%20الاستفسار%20عن%20خدمات%20هاوس%20ريفريش'
     }
   ];
 
